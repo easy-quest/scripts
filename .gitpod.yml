@@ -1,0 +1,29 @@
+tasks:
+  - init: |
+      echo 'TODO: build project'
+      python -m pip install --upgrade pip
+      python -m pip install --upgrade pip setuptools wheel pip-tools robotframework bpython
+      python -m pip install requests-html requests-html-macros
+      # python -m pip install --upgrade pip yapf autoflake isort coverage scrapy newspaper3k requests bs4 
+      # python -m pip install --upgrade 'requests[socks]'
+      sudo apt-get install lynx direnv -y
+    command: |
+      echo 'TODO: start app'
+      # python -m pip freeze > requirements.in
+      # pip-compile
+      # rm requirements.in
+      # python -m pip install -U -r requirements.txt
+      # printf "#!/usr/bin/env bash \nexport z='EasyQuest'" > .envrc;direnv allow
+      echo 'TODO:Good!!!'
+
+# ports:
+#   - port: 8000
+#     visibility: private
+#     onOpen: open-preview
+vscode:
+  extensions:
+    - ms-python.python
+    - ms-toolsai.jupyter
+    - d-biehl.robotcode
+    - magicstack.magicpython
+    - formulahendry.code-runner

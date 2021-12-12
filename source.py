@@ -9,6 +9,7 @@
 
 import random
 from requests_html import HTMLSession
+from bs4 import BeautifulSoup as bs
 session = HTMLSession()
  
 filename = random.random()
@@ -22,4 +23,8 @@ r = session.get(url)
 with open(f"{filename}.html", "w") as file:
    file.write(r.text)
 
+soup = bs(r.text, 'html.parser')
+
+with open(f"{filename}_bs.html", "w") as f:
+   f.write(soup.prettify())
 # print(r.text)
