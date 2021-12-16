@@ -9,6 +9,7 @@ tasks:
       sudo apt-get install lynx direnv -y
     command: |
       echo 'TODO: start app'
+      python -m pip install requests-html requests-html-macros
       # python -m pip freeze > requirements.in
       # pip-compile
       # rm requirements.in

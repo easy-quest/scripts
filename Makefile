@@ -13,7 +13,13 @@ dump:
 	scrapy genspider -d xmlfeed xmlfeed example.com
 	
 venv:
-	python3.9 -m venv .venv;
+	python3.10 -m venv .venv;
 	.venv/bin/python -m pip install --upgrade pip setuptools wheel pip-tools robotframework bpython
 	.venv/bin/python -m pip install --upgrade pip yapf autoflake isort coverage scrapy newspaper3k requests bs4 
 	.venv/bin/python -m pip install --upgrade -r requirements.txt
+
+
+
+
+pkg:
+	pkg up;pkg i rust cargo -y
