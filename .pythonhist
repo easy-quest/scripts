@@ -1,0 +1,4 @@
+fetch('https://clever-lichterman-044f16.netlify.com/products/taba-cream.1/')
+view(response)
+response.xpath("//div[@class='my-4']/span/text()").get()
+response.css('.my-4 span::text').get()

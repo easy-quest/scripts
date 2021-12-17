@@ -15,7 +15,7 @@ dump:
 venv:
 	python -m venv .venv;
 	.venv/bin/python -m pip install --upgrade pip setuptools wheel pip-tools robotframework bpython
-	.venv/bin/python -m pip install --upgrade pip yapf autoflake isort coverage 
+	.venv/bin/python -m pip install --upgrade pip yapf autoflake isort coverage  pyodbc mysqlclient psycopg2
 	.venv/bin/python -m pip install --upgrade -r requirements.txt
 
 tor:
