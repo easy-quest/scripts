@@ -39,8 +39,9 @@ print(meta_desc)
 # Вы можете извлечь любую конкретную информацию со страницы, используя обозначение точки (.)
 # для выбора класса или обозначение фунта (#) для выбора идентификатора.
 
-titles = response.html.find('.card__content', first=True).text
-print(titles)
+titles = response.html.find('.card__content')
+print(titles[0].text)
+
 
 # Extract Canonical Link
 
@@ -48,4 +49,12 @@ canonical = response.html.xpath("//link[@rel='canonical']/@href")
 print(canonical)
 
 # Извлечение Вложенной Информации
-get_nav_links = response.html.find('a.sub-m-cat span')
+get_nav_links = response.html.find('.navigation')
+
+nav_links = []
+ 
+for i in range(len(get_nav_links)):
+    x = get_nav_links[i].text
+    nav_links.append(x)
+     
+pprint(nav_links)
