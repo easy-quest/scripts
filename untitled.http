@@ -1,0 +1,20 @@
+
+https://searx.garudalinux.org/search?q=%D0%BA%D1%83%D0%B1%D0%B0%D0%BD%D1%8C%20%D0%BD%D0%B0%D1%80%D0%BA%D0%BE%D1%82%D0%B8%D0%BA%D0%B8&categories=news&language=ru-RU
+
+###
+curl 'https://searx.garudalinux.org/search?q=%D0%BA%D1%83%D0%B1%D0%B0%D0%BD%D1%8C%20%D0%BD%D0%B0%D1%80%D0%BA%D0%BE%D1%82%D0%B8%D0%BA%D0%B8&categories=news&language=ru-RU&format=rss' \
+  -H 'authority: searx.garudalinux.org' \
+  -H 'sec-ch-ua: "Yandex";v="21", " Not;A Brand";v="99", "Chromium";v="93"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "Linux"' \
+  -H 'upgrade-insecure-requests: 1' \
+  -H 'dnt: 1' \
+  -H 'user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 YaBrowser/21.9.1.600 (beta) Yowser/2.5 Safari/537.36' \
+  -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'sec-fetch-mode: navigate' \
+  -H 'sec-fetch-user: ?1' \
+  -H 'sec-fetch-dest: document' \
+  -H 'accept-language: ru,en;q=0.9' \
+  -H 'cookie: cf_clearance=82TmTbGhZl4YqHQDYp1hGY2gLOKq2Z4MQl1p9Yje3t4-1639262739-0-150' \
+  --compressed
