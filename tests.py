@@ -36,10 +36,14 @@ proxies = {
 		"https": proxy
     }
     
+url = "https://kubnews.ru/"
+
 session = HTMLSession()
+r = session.get(url, headers=headers, proxies=proxies)
+r.html.render() 
     
 # r = session.get('https://www.novostibankrotstva.ru', headers=headers, proxies=proxies)
-r = session.get('https://check.torproject.org/', headers=headers, proxies=proxies)
+# r = session.get('https://check.torproject.org/', headers=headers, proxies=proxies)
 sleep(1)
 
 # pprint(r.html.links)
@@ -48,7 +52,11 @@ sleep(1)
 # title = r.html.xpath('title')
 # print(title.text)
 # print(r.html.text)
-r.html.render()  
-print(r.html.html) 
+# r.html.render()  
+# print(r.html.html) 
 # r.html.render(sleep=2, scrolldown=1)
 
+titles = r.html.find('.card__description')  
+# <div class="card__description">Четыре человека оказались в больнице по вине 18-летнего водителя иномарки в Приморско-Ахтарске</div>
+for title in titles:
+	print(title.text, ':', title.absolute_links.pop())
