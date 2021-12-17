@@ -13,14 +13,14 @@ dump:
 	scrapy genspider -d xmlfeed xmlfeed example.com
 	
 venv:
-	python3.10 -m venv .venv;
+	python -m venv .venv;
 	.venv/bin/python -m pip install --upgrade pip setuptools wheel pip-tools robotframework bpython
-	.venv/bin/python -m pip install --upgrade pip yapf autoflake isort coverage scrapy newspaper3k requests bs4 
+	.venv/bin/python -m pip install --upgrade pip yapf autoflake isort coverage 
 	.venv/bin/python -m pip install --upgrade -r requirements.txt
 
 tor:
-	sudo apt install tor -y
-	pip install -U 'requests[socks]'
+# 	sudo apt install tor -y
+	.venv/bin/python -m pip install --upgrade 'requests[socks]' scrapy newspaper3k requests-html requests-html-macros
 	tor -f torrc
 
 
